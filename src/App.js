@@ -19,6 +19,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
+import Router from './router';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -29,14 +30,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={backgroundStyle}>
-          <Text>Ok Ready</Text>
-        </ScrollView>
-      </SafeAreaView>
+      <Router />
     </NavigationContainer>
   );
 };
